@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                tools:context=".MainActivity"
+                android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scroll_view">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:id="@+id/guessLeftSection">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Guesses Left:"
+                    android:id="@+id/lives_text"
+                    android:textSize="25sp"
+                    android:layout_gravity="start"
+                    android:paddingTop="3dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GUESSLEFT"
+                    android:textSize="30sp"
+                    android:id="@+id/guesses_left_fill_in"
+                    android:layout_gravity="end"
+                    android:paddingLeft="10dp"
+                    />
+            </LinearLayout>
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@id/guessLeftSection"
+                android:id="@+id/space1"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/space1"
+                android:id="@+id/used_letters_section">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Used Letters:"
+                    android:id="@+id/used_text"
+                    android:textSize="25sp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="USEDLETTERS"
+                    android:id="@+id/used_letters_fill_in"
+                    android:textSize="20sp"
+                    android:layout_weight="1"
+                    android:minLines="3"
+                    android:paddingLeft="5dp"/>
+            </LinearLayout>
+
+
+            <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_below="@id/used_letters_section"
+                android:id="@+id/space3"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/space3"
+                android:id="@+id/currentWordSection">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Word:"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="20sp"
+                    android:id="@+id/currentWordLabel"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:id="@+id/currentWord"
+                    android:layout_toRightOf="@+id/currentWordLabel"/>
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:orientation="vertical"
+                android:layout_below="@+id/currentWordSection">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:id="@+id/input_guess"
+                    android:layout_centerHorizontal="true"
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:maxLength="1"
+                    android:hint="Input your guess here"
+                    android:ellipsize="start"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Make a guess"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@+id/input_guess"
+                    android:layout_marginTop="10dp"
+                    android:onClick="MakeGuess"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/null_controller_view"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/null_controller"
+            android:textSize="20sp"/>
+
+    </ScrollView>
+</RelativeLayout>

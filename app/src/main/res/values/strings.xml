@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EvilHangman Android</string>
+    <string name="title_activity_game_play">Evil Hangman Game Play!</string>
+    <string name="title_activity_main">Evil Hangman for Android!</string>
+    <string name="title_activity_select_dictionary">Select the dictionary input file</string>
+    <string name="null_controller">You didn\'t set the studentController to an instance of your class that
+        implements StudentEvilHangmanGameController. Look at the TODOs by finding the TODO button at
+        the bottom of the Android Studio IDE.
+        Follow it to the line that indicate where to set studentController = to a
+        new instance of your class!</string>
+</resources>
