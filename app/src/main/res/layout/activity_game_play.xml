@@ -114,10 +114,12 @@
                     android:padding="15dp"
                     android:id="@+id/input_guess"
                     android:layout_centerHorizontal="true"
-                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-                    android:maxLength="1"
                     android:hint="Input your guess here"
-                    android:ellipsize="start"/>
+                    android:ellipsize="start"
+                    android:maxLength="1"/>
+                <!--took this out to let students deal with mal formed input
+                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    -->
 
                 <Button
                     android:layout_width="wrap_content"
